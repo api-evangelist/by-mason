@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/by-mason/main/json-schema/by-mason-post-v1-default-device-broadcast-request-schema.json",
+  "title": "PostV1DefaultDeviceBroadcastRequest",
+  "x-generated": "2026-10-22",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/by-mason-openapi-generated.yml#/components/schemas/PostV1DefaultDeviceBroadcastRequest",
+  "type": "object",
+  "properties": {
+    "devices": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "targetApps": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "command": {
+      "type": "string"
+    },
+    "args": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

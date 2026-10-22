@@ -1,0 +1,55 @@
+generated: '2026-10-22'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://docs.bymason.com/cli/commands/v2
+sources:
+- https://docs.bymason.com/cli/commands/v2
+- https://docs.bymason.com/cli/installation
+- https://docs.bymason.com/how-to/cli
+- https://docs.bymason.com/sdks/framework
+install:
+- method: Windows PowerShell
+  command: Invoke-WebRequest -Uri https://gitlab.com/api/v4/projects/38097768/packages/generic/cli-releases/latest/mason-cli-windows -OutFile
+    mason.exe
+- method: Windows PowerShell verification
+  command: .\mason.exe -v
+- method: Linux/macOS
+  command: curl https://gitlab.com/api/v4/projects/38097768/packages/generic/cli-releases/latest/mason-cli-linux --output mason
+- method: macOS (M1+/ARM)
+  command: curl https://gitlab.com/api/v4/projects/38097768/packages/generic/cli-releases/latest/mason-cli-mac-m1 --output mason
+- method: macOS (x86)
+  command: curl https://gitlab.com/api/v4/projects/38097768/packages/generic/cli-releases/latest/mason-cli-mac --output mason
+- method: Set executable permission
+  command: chmod +x mason
+- method: Verification
+  command: mason -v
+commands:
+- group: mason create
+  commands:
+  - mason create project
+  - mason create
+- group: mason deploy
+  commands:
+  - mason deploy apk
+  - mason deploy config
+  - mason deploy ota
+  - mason deploy
+- group: mason xray
+  commands:
+  - mason xray get-bug-report
+  - mason xray get-file
+  - mason xray get-logs
+  - mason xray get-screen-capture
+  - mason xray install-apk
+  - mason xray list-files
+  - mason xray logcat
+  - mason xray put-file
+  - mason xray uninstall-apk
+  - mason xray
+- group: mason
+  commands:
+  - mason
+  - mason --api-key
+  - mason -v
+binary: mason
+docs: https://docs.bymason.com/cli/commands/v2

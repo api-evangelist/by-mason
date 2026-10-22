@@ -1,0 +1,12 @@
+generated: '2026-10-22'
+method: searched
+probe: true
+source: https://www.bymason.com/security
+url: https://www.bymason.com/security
+certifications:
+- SOC 2
+evidence:
+- source: https://www.bymason.com/security
+  keywords:
+  - soc 2
+  - trust center

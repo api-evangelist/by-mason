@@ -1,0 +1,33 @@
+{
+  "@context": {
+    "@vocab": "https://bymason.com/schema#",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "by": "https://bymason.com/schema#",
+    "PostV1DefaultDeviceBroadcastRequest": "by:PostV1DefaultDeviceBroadcastRequest",
+    "devices": {
+      "@id": "by:devices",
+      "@container": "@list"
+    },
+    "targetApps": {
+      "@id": "by:targetApps",
+      "@container": "@list"
+    },
+    "command": {
+      "@id": "by:command",
+      "@type": "xsd:string"
+    },
+    "args": {
+      "@id": "by:args",
+      "@container": "@list"
+    }
+  },
+  "@type": "schema:Dataset",
+  "schema:name": "By Mason API JSON-LD context",
+  "schema:description": "A JSON-LD @context for the objects By Mason's own API contract declares: one class per component schema, one property per declared field, typed from the contract. Derived by script (derive-json-ld.py, 2026-10-22) from openapi/_ae-authored/by-mason-openapi-generated.yml.",
+  "dcterms:created": "2026-10-22",
+  "dcterms:source": [
+    "openapi/_ae-authored/by-mason-openapi-generated.yml"
+  ]
+}

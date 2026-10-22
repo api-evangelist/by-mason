@@ -1,25 +1,111 @@
 aid: by-mason
+
 name: By Mason
-description: 'By Mason is a company surfaced via the API Evangelist harvest backlog (source: vc-portfolio;
-  backed by coatue) and added to the network as a stub for full-pipeline profiling.'
+
+description: Mason offers an enterprise platform that combines purpose‑built IoT hardware with a device management console. The company provides
+  devices such as Mini 400, Scan 600, Radio 600T, Body 600, Smartphone 300 and SmartTab 300, and supports fleet management, automated updates,
+  and remote monitoring for customers in healthcare, logistics, retail and other industries.
+
 url: https://raw.githubusercontent.com/api-evangelist/by-mason/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:vc-portfolio
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-22 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-22'
+
 modified: '2026-10-22'
+
 tags:
-- Company
-apis: []
+- IoT
+- Device Management
+- Enterprise Hardware
+- Fleet Management
+- Rugged Devices
+- Healthcare
+- Logistics
+- Retail
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
-x-backed-by:
-- coatue
+
 common:
+- type: Spectral
+  url: rules/by-mason-rules.yml
+- type: JSONLD
+  url: json-ld/by-mason-context.jsonld
+- type: Vocabulary
+  url: vocabulary/by-mason-vocabulary.yml
+- type: DataModel
+  url: data-model/by-mason-data-model.yml
+- type: CLI
+  url: cli/by-mason-cli.yml
+- type: Compliance
+  url: https://www.bymason.com/security
+- type: Conformance
+  url: conformance/by-mason-conformance.yml
+- type: SecurityTxt
+  url: well-known/by-mason-status-security.txt
+- type: WellKnown
+  url: well-known/by-mason-well-known.yml
+- type: Hosts
+  url: hosts/by-mason-hosts.yml
+- type: Vendors
+  url: vendors/by-mason-vendors.yml
+- type: TermsOfService
+  url: https://www.bymason.com/terms-and-conditions
+- type: Support
+  url: https://support.bymason.com/hc/en-us
+- type: StatusPage
+  url: https://status.bymason.com/
+- type: Security
+  url: https://www.bymason.com/security
+- type: PrivacyPolicy
+  url: https://www.bymason.com/privacy-policy
+- type: ChangeLog
+  url: https://docs.bymason.com/mason-os/release-notes/os6
+- type: Blog
+  url: https://www.bymason.com/blog
+- type: GettingStarted
+  url: https://docs.bymason.com/setup-guide
+- type: Documentation
+  url: https://docs.bymason.com/
+- type: TrustCenter
+  url: security/by-mason-trust-center.yml
+- type: VulnerabilityDisclosure
+  url: security/by-mason-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/by-mason-domain-security.yml
 - type: Website
   url: https://www.bymason.com
+
+apis:
+- aid: by-mason:by-mason-api
+  name: By Mason API
+  description: 'By Mason API as documented publicly: 4 operations. Contract generated from the documentation by API Evangelist (2026-10-22); not
+    the provider''s own document.'
+  humanURL: https://docs.bymason.com/how-to/broadcast-api-guide
+  baseURL: https://api.bymason.com
+  properties:
+  - type: OpenAPI
+    url: openapi/_ae-authored/by-mason-openapi-generated.yml
+    x-provenance: generated
+  - type: JSONSchema
+    url: json-schema/by-mason-post-v1-default-device-broadcast-request-schema.json
+
+x-backed-by:
+- coatue
+x-enrichment:
+  date: '2026-10-22'
+  status: enriched
+  artifacts_added: 19
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local

@@ -1,0 +1,26 @@
+generated: '2026-10-22'
+method: derived
+generator: derive-vocabulary.py
+source: openapi/_ae-authored/by-mason-openapi-generated.yml
+vocabulary:
+  name: By Mason Domain Vocabulary
+  description: 'Terms declared by By Mason''s own API contract: its resource groups, objects and enumerations, with the contract''s definitions.
+    Derived, not authored.'
+  version: '2026-10-22'
+  terms:
+  - term: PostV1DefaultDeviceBroadcastRequest
+    definition: 'Object declared by the contract with fields: devices, targetApps, command, args.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/by-mason-openapi-generated.yml#/components/schemas/PostV1DefaultDeviceBroadcastRequest
+  - term: Api
+    definition: 'Resource group in the contract; its operation GET /api/v4/projects/{projectid}/packages/generic/cli-releases/latest/mason-cli-linux:
+      GET /api/v4/projects/{projectId}/packages/generic/cli-releases/latest/mason-cli-linux'
+    tags:
+    - Resource Group
+    source: openapi/_ae-authored/by-mason-openapi-generated.yml
+  - term: Default
+    definition: 'Resource group in the contract; its operation POST /v1/default/device/broadcast: POST /v1/default/device/broadcast'
+    tags:
+    - Resource Group
+    source: openapi/_ae-authored/by-mason-openapi-generated.yml

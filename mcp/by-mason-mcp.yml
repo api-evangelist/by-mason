@@ -1,0 +1,10 @@
+generated: "2026-10-22"
+method: derived
+source:
+  - url: https://api.bymason.com/mcp
+  - note: MCP endpoint requires authentication (401), so mode set to none
+deployment:
+  mode: none
+  package: ""
+  auth: unknown
+  verified: derived

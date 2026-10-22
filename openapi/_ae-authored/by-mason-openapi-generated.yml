@@ -1,0 +1,142 @@
+openapi: 3.1.0
+info:
+  title: By Mason API
+  version: '2026-10-22'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-22: 4 operation(s) read from 3 public documentation page(s) (each operation
+    names its page in x-source). This is not the provider''s published contract; By Mason has published no machine-readable contract that the
+    pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 4
+    documentation: 0
+    pages-with-code: 3
+    pages-read: 3
+  x-source-kind: mostly-language-sdk-reference
+  x-source-caveat: 'all but one page read was a language SDK reference (a client library) rather than a REST reference: paths and methods are
+    the ones those pages name'
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-22'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://docs.bymason.com/how-to/broadcast-api-guide
+  - https://docs.bymason.com/how-to/cli
+  - https://docs.bymason.com/cli/installation
+servers:
+- url: https://api.bymason.com
+paths:
+  /api/v4/projects/{projectid}/packages/generic/cli-releases/latest/mason-cli-linux:
+    get:
+      operationId: get_api_v4_projects_projectid_packages_generic_cli_releases_latest_mason_cli_lin
+      tags:
+      - Api
+      summary: GET /api/v4/projects/{projectId}/packages/generic/cli-releases/latest/mason-cli-linux
+      x-source: https://docs.bymason.com/how-to/cli
+      parameters:
+      - name: projectid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl https://gitlab.com/api/v4/projects/38097768/packages/generic/cli-releases/latest/mason-cli-linux --output mason \n MacOS\
+          \ (M1+ / ARM) "
+  /api/v4/projects/{projectid}/packages/generic/cli-releases/latest/mason-cli-mac:
+    get:
+      operationId: get_api_v4_projects_projectid_packages_generic_cli_releases_latest_mason_cli_mac
+      tags:
+      - Api
+      summary: GET /api/v4/projects/{projectId}/packages/generic/cli-releases/latest/mason-cli-mac
+      x-source: https://docs.bymason.com/how-to/cli
+      parameters:
+      - name: projectid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl https://gitlab.com/api/v4/projects/38097768/packages/generic/cli-releases/latest/mason-cli-mac --output mason \n Add execute\
+          \ permissions to the CLI \n chmod +x mason \n Run mason -v to ensure the version you downloaded matches what you see: "
+  /api/v4/projects/{projectid}/packages/generic/cli-releases/latest/mason-cli-mac-m1:
+    get:
+      operationId: get_api_v4_projects_projectid_packages_generic_cli_releases_latest_mason_cli_mac
+      tags:
+      - Api
+      summary: GET /api/v4/projects/{projectId}/packages/generic/cli-releases/latest/mason-cli-mac-m1
+      x-source: https://docs.bymason.com/how-to/cli
+      parameters:
+      - name: projectid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl https://gitlab.com/api/v4/projects/38097768/packages/generic/cli-releases/latest/mason-cli-mac-m1 --output mason \n MacOS\
+          \ (x86) "
+  /v1/default/device/broadcast:
+    post:
+      operationId: post_v1_default_device_broadcast
+      tags:
+      - Default
+      summary: POST /v1/default/device/broadcast
+      x-source: https://docs.bymason.com/how-to/broadcast-api-guide
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostV1DefaultDeviceBroadcastRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -i -H \"Authorization: basic $APIKEY\" -d '{\"devices\":[\"$deviceID\"],\"targetApps\":[\"com.example.myapplication\"],\"\
+          command\":\"First message\",\"args\":[\"arg1\",\"arg2\"]}' <https://api.bymason.com/v1/default/device/broadcast> \n In this example,\
+          \ $APIKEY is an environment variable containing a Mason Platform API Key, authenticating the API call. Previous Remotely debug devices\
+          \ with X-Ray Next Branding Your"
+components:
+  schemas:
+    PostV1DefaultDeviceBroadcastRequest:
+      type: object
+      properties:
+        devices:
+          type: array
+          items:
+            type: string
+        targetApps:
+          type: array
+          items:
+            type: string
+        command:
+          type: string
+        args:
+          type: array
+          items:
+            type: string
+  securitySchemes:
+    basic:
+      type: http
+      scheme: basic
+security:
+- basic: []
+tags:
+- name: Api
+- name: Default
